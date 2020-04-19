@@ -7,11 +7,12 @@ public class Main {
 		try {
 			JDA api = new JDABuilder(AccountType.BOT)
 					.setToken("TOKEN").build();
+			/* if i share the actual token people will
+			be able to run/modify my bot */
 			api.addEventListener(new CommandHandler());
 			api.addEventListener(new FileCommands());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 }
